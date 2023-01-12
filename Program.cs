@@ -1,19 +1,25 @@
-﻿// Написать программу, которая из имеющегося массива строк, формирует массив строк,длина кторых меньше либо равна 3 символа.
+﻿// Написать программу, которая из имеющегося массива строк, формирует массив строк,длина
+//  которых меньше либо равна 3 символа.
 
-// ["pictures", "2", "river", "+&*" ];
+// ["pictures", "2", "river", "+&*", "cat"];
 // ["1234", "567", "new year", "-1" ];
 // ["Tomato", "Football", "Kitchen"];
 
+    // Console.WriteLine(arr[i].Length);
 //
-string [] arr = {"pictures", "2", "river", "+&*"};
+// string[] arr = { "pictures", "2", "river", "+&*", "cat"};
+string [] arr = {"1234", "567", "new year", "-1" };
+// string[] sortedArr = { };
 
-string [] sortedArr = {}; 
-int count = 0; 
-
-for ( int i = 0; i < arr.Length; i++)
+Console.Write("[");
+for (int i = 0; i < arr.Length; i++)
 {
- Console.WriteLine(arr[i].Length);
+    if (arr[i].Length <= 3)
+    {
+      Console.Write($"{arr[i]},");
+    }
 }
+  Console.Write("]");
 
 // string str = "pictures";
 // int lengh = str.Length;
