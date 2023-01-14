@@ -5,24 +5,31 @@
 // ["1234", "567", "new year", "-1" ];
 // ["Tomato", "Football", "Kitchen"];
 
-    // Console.WriteLine(arr[i].Length);
+// Console.WriteLine(arr[i].Length);
 //
 // string[] arr = { "pictures", "2", "river", "+&*", "cat"};
-string [] arr = {"1234", "567", "new year", "-1" };
-// string[] sortedArr = { };
+string[] arr = { "1234", "567", "new year", "-1" };
+string[] sortedArr = new string[arr.Length];
 
 Console.Write("[");
 for (int i = 0; i < arr.Length; i++)
 {
     if (arr[i].Length <= 3)
     {
-      Console.Write($"{arr[i]},");
+
+        sortedArr[i] = arr[i] ;
+        Console.Write($"{sortedArr[i]},");
     }
+  
 }
-  Console.Write("]");
+Console.Write("]"); 
+Console.WriteLine();
 
-// string str = "pictures";
-// int lengh = str.Length;
+sortedArr = sortedArr.Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
+// sortedArr = sortedArr.Where(a => "" != a).ToArray();
 
-// Console.WriteLine("The length of '{0}' is {1}", str, str.Length);
-// Console.WriteLine("The length of '{0}' is {1}", "+&*", "+&*".Length);
+for (int i = 0; i < sortedArr.Length; i++)
+{
+  Console.Write($"{sortedArr[i]}, ");
+  }
+
